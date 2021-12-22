@@ -39,7 +39,7 @@ public class BrandActivity extends AppCompatActivity {
     ArrayList<SanPham> dsSanPham;
 
     final String DB_PATH_SUFFIX = "/databases/";
-    final String DB_NAME = "dbsanpham";
+    final String DB_NAME = "dbsanpham.sqlite";
 
     ThuongHieu thChon = null;
     private AlertDialog.Builder builder;
@@ -97,7 +97,7 @@ public class BrandActivity extends AppCompatActivity {
                 MODE_PRIVATE,
                 null
         );
-        Cursor cursor = database.rawQuery("Select * From ThuongHieu", null);
+        Cursor cursor = database.rawQuery("Select * From thuonghieu", null);
         adapterThuongHieu.clear();
         while (cursor.moveToNext()) {
             String idTH = cursor.getString(0);
