@@ -6,4 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".HomePageActivity">
 
+    <ListView
+        android:id="@+id/lvSanPham"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabThem"
+        android:layout_width="61dp"
+        android:layout_height="56dp"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/icons_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:tint="@null"
+        app:maxImageSize="60dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
