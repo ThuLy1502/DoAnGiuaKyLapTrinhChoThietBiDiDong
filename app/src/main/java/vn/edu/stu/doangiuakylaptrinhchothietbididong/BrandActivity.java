@@ -149,8 +149,8 @@ public class BrandActivity extends AppCompatActivity {
                         null
                 );
                 ContentValues row = new ContentValues();
-                row.put("tenth", th.getIdth());
-                row.put("idth", th.getTenth());
+                row.put("idth", th.getIdth());
+                row.put("tenth", th.getTenth());
 
                 long insertedID = database.insert(
                         "thuonghieu",
