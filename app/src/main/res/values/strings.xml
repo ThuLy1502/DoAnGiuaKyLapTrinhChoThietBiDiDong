@@ -1,3 +1,74 @@
 <resources>
     <string name="app_name">DoAnGiuaKyLapTrinhChoThietBiDiDong</string>
+    // Tiêu đề
+    <string name="title_website">Shoe Selling Website</string>
+    <string name="title_products_list">Products List</string>
+    <string name="title_about">About</string>
+    <string name="title_activity_maps">Maps</string>
+    <string name="title_add_product">Add Product</string>
+    <string name="title_brand_list">Brand List</string>
+    <string name="title_details_product">Detail Product</string>
+
+
+    // Trang đăng nhập
+    <string name="txt_login">LOG IN</string>
+    <string name="btn_login">Log in</string>
+    <string name="txt_username">Username</string>
+    <string name="txt_password">Password</string>
+
+
+    // Trang danh sách sản phẩm
+    <string name="txt_price">Price: </string>
+    <string name="notification">Notification</string>
+    <string name="message">Are you sure that you want to delete this product?</string>
+    <string name="cancel">Cancel</string>
+    <string name="agree">Agree</string>
+    <string name="toast_delete">Delete product successfully</string>
+
+
+    // Trang thêm sản phẩm
+    <string name="txt_product_name">Product Name:</string>
+    <string name="txt_size">Size:</string>
+    <string name="txt_type">Type:</string>
+    <string name="btn_add_image">Add Image</string>
+    <string name="btn_save">Save</string>
+    <string name="fab_back">Back</string>
+    <string name="toast_product_add">Add product successfully</string>
+
+
+    // Trang chi tiết sản phẩm
+    <string name="btn_edit">Edit</string>
+    <string name="btn_update">Update</string>
+    <string name="toast_permission">Permission denied</string>
+
+
+    // Trang thương hiệu sản phẩm
+    <string name="txt_brand_id">Brand Id:</string>
+    <string name="txt_brand_name">Brand Name:</string>
+    <string name="btn_brand_add">Add</string>
+    <string name="btn_brand_update">Update</string>
+    <string name="toast_brand_add">Brand add successful</string>
+    <string name="toast_brand_update">Brand update successful</string>
+    <string name="message_brand">Are you sure that you want to delete this brand?</string>
+    <string name="toast_delete_brand">Delete brand successfully</string>
+    <string name="mnu_product_list">Product list</string>
+    <string name="mnu_delete">Delete a brand</string>
+    <string name="toast_deleted">There are products in the brand, which cannot be deleted</string>
+
+
+    // Trang main
+    <string name="toast_username">Wrong username</string>
+    <string name="toast_password">Wrong password</string>
+
+
+    // About
+    <string name="toast_grant_permission">Please grant permission in App Setting</string>
+
+
+    // Menu
+    <string name="menu_product_list">Product list</string>
+    <string name="menu_brand_list">Brand list</string>
+    <string name="menu_logout">Logout</string>
+    <string name="menu_about">About</string>
+    <string name="menu_exit">Exit</string>
 </resources>

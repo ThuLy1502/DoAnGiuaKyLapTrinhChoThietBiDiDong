@@ -49,23 +49,22 @@ public class BrandActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_brand);
 
-        //dsSanPham = new ArrayList<>();
         copyDbFromAssets();
         addControls();
         docDsThuonghieuTuDb();
-        //docDsSpTuDb();
+        docDsSpTuDb();
         addEvents();
 
     }
 
-//    private boolean checkProductInBrand(ThuongHieu th) {
-//        for (int i = 0; i < dsSanPham.size(); i++) {
-//            if (dsSanPham.get(i).getPhanloai().equals(th.getIdth())) {
-//                return true;
-//            }
-//        }
-//        return false;
-//    }
+    private boolean checkProductInBrand(ThuongHieu th) {
+        for (int i = 0; i < dsSanPham.size(); i++) {
+            if (dsSanPham.get(i).getPhanloai().equals(th.getIdth())) {
+                return true;
+            }
+        }
+        return false;
+    }
 
     private void copyDbFromAssets() {
         File dbFile = getDatabasePath(DB_NAME);
@@ -109,28 +108,28 @@ public class BrandActivity extends AppCompatActivity {
         adapterThuongHieu.notifyDataSetChanged();
     }
 
-//    private void docDsSpTuDb() {
-//        SQLiteDatabase database = openOrCreateDatabase(
-//                DB_NAME,
-//                MODE_PRIVATE,
-//                null
-//        );
-//        Cursor cursor = database.rawQuery("Select * From sanpham", null);
-//        dsSanPham.clear();
-//        while (cursor.moveToNext()) {
-//            int id = cursor.getInt(0);
-//            String txtTenSP = cursor.getString(1);
-//            int kichthuoc = cursor.getInt(2);
-//            int gia = cursor.getInt(3);
-//            String txtPhanLoai = cursor.getString(4);
-//            byte[] imgHinh = cursor.getBlob(5);
-//
-//            SanPham sp = new SanPham(id, txtTenSP, txtPhanLoai, imgHinh, String.valueOf(gia), String.valueOf(kichthuoc));
-//            dsSanPham.add(sp);
-//        }
-//        cursor.close();
-//        database.close();
-//    }
+    private void docDsSpTuDb() {
+        SQLiteDatabase database = openOrCreateDatabase(
+                DB_NAME,
+                MODE_PRIVATE,
+                null
+        );
+        Cursor cursor = database.rawQuery("Select * From sanpham", null);
+        dsSanPham.clear();
+        while (cursor.moveToNext()) {
+            int id = cursor.getInt(0);
+            String txtTenSP = cursor.getString(1);
+            int kichthuoc = cursor.getInt(2);
+            int gia = cursor.getInt(3);
+            String txtPhanLoai = cursor.getString(4);
+            byte[] imgHinh = cursor.getBlob(5);
+
+            SanPham sp = new SanPham(id, txtTenSP, txtPhanLoai, imgHinh, String.valueOf(gia), String.valueOf(kichthuoc));
+            dsSanPham.add(sp);
+        }
+        cursor.close();
+        database.close();
+    }
 
     private void addEvents() {
         btnThemThuongHieu.setOnClickListener(new View.OnClickListener() {
@@ -342,58 +341,58 @@ public class BrandActivity extends AppCompatActivity {
                 intent.putExtra("hienThiSpTheoTh", th);
                 startActivity(intent);
                 break;
-//            case R.id.mnuDelete:
-//                xoaThuongHieu(index);
-//                break;
+            case R.id.mnuDelete:
+                xoaThuongHieu(index);
+                break;
             default:
                 break;
         }
         return super.onContextItemSelected(item);
     }
 
-//    private void xoaThuongHieu(int position) {
-//        ThuongHieu th = adapterThuongHieu.getItem(position);
-//        if (checkProductInBrand(th)) {
-//            Toast.makeText(
-//                    BrandActivity.this,
-//                    getString(R.string.toast_deleted),
-//                    Toast.LENGTH_LONG
-//            ).show();
-//        } else {
-//            AlertDialog.Builder builder = new AlertDialog.Builder(BrandActivity.this);
-//            builder.setIcon(R.drawable.icons_notification);
-//            builder.setTitle(getString(R.string.notification));
-//            builder.setMessage(getString(R.string.message_brand));
-//            builder.setPositiveButton(getString(R.string.agree), new DialogInterface.OnClickListener() {
-//                @Override
-//                public void onClick(DialogInterface dialog, int which) {
-//                    ThuongHieu th = adapterThuongHieu.getItem(position);
-//                    SQLiteDatabase database = openOrCreateDatabase(
-//                            DB_NAME,
-//                            MODE_PRIVATE,
-//                            null
-//                    );
-//                    int deletedRowCount = database.delete(
-//                            "thuonghieu",
-//                            "idth=?",
-//                            new String[]{th.getIdth()}
-//                    );
-//                    Toast.makeText(
-//                            BrandActivity.this,
-//                            getString(R.string.toast_delete_brand),
-//                            Toast.LENGTH_LONG
-//                    ).show();
-//                    database.close();
-//                    docDsThuonghieuTuDb();
-//                }
-//            });
-//            builder.setNegativeButton(getString(R.string.cancel), new DialogInterface.OnClickListener() {
-//                @Override
-//                public void onClick(DialogInterface dialog, int which) {
-//                }
-//            });
-//            AlertDialog dialog = builder.create();
-//            dialog.show();
-//        }
-//    }
+    private void xoaThuongHieu(int position) {
+        ThuongHieu th = adapterThuongHieu.getItem(position);
+        if (checkProductInBrand(th)) {
+            Toast.makeText(
+                    BrandActivity.this,
+                    getString(R.string.toast_deleted),
+                    Toast.LENGTH_LONG
+            ).show();
+        } else {
+            AlertDialog.Builder builder = new AlertDialog.Builder(BrandActivity.this);
+            builder.setIcon(R.drawable.icons_notification);
+            builder.setTitle(getString(R.string.notification));
+            builder.setMessage(getString(R.string.message_brand));
+            builder.setPositiveButton(getString(R.string.agree), new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    ThuongHieu th = adapterThuongHieu.getItem(position);
+                    SQLiteDatabase database = openOrCreateDatabase(
+                            DB_NAME,
+                            MODE_PRIVATE,
+                            null
+                    );
+                    int deletedRowCount = database.delete(
+                            "thuonghieu",
+                            "idth=?",
+                            new String[]{th.getIdth()}
+                    );
+                    Toast.makeText(
+                            BrandActivity.this,
+                            "Xóa thương hiệu thành công",
+                            Toast.LENGTH_LONG
+                    ).show();
+                    database.close();
+                    docDsThuonghieuTuDb();
+                }
+            });
+            builder.setNegativeButton(getString(R.string.cancel), new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                }
+            });
+            AlertDialog dialog = builder.create();
+            dialog.show();
+        }
+    }
 }

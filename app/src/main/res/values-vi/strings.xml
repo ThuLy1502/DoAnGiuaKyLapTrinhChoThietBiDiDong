@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DoAnGiuaKyLapTrinhChoThietBiDiDong</string>
+    // Tiêu đề
+    <string name="title_website">Website Bán Giày</string>
+    <string name="title_products_list">Danh Sách Sản Phẩm</string>
+    <string name="title_about">Thông tin cá nhân</string>
+    <string name="title_activity_maps">Bản đồ</string>
+    <string name="title_add_product">Thêm Sản Phẩm</string>
+    <string name="title_brand_list">Danh Sách Thương Hiệu</string>
+    <string name="title_details_product">Chi Tiết Sản Phẩm</string>
+
+
+    // Trang đăng nhập
+    <string name="txt_login">ĐĂNG NHẬP</string>
+    <string name="btn_login">Đăng nhập</string>
+    <string name="txt_username">Tên tài khoản</string>
+    <string name="txt_password">Mật khẩu</string>
+
+
+    // Trang danh sách sản phẩm / listview
+    <string name="txt_price">Giá: </string>
+    <string name="notification">Thông báo</string>
+    <string name="message">Bạn có chắn muốn xóa sản phẩm này không?</string>
+    <string name="cancel">Hủy</string>
+    <string name="agree">Đồng ý</string>
+    <string name="toast_delete">Xóa sản phẩm thành công</string>
+
+
+    // Trang thêm sản phẩm
+    <string name="txt_product_name">Tên sản phẩm:</string>
+    <string name="txt_size">Kích cỡ:</string>
+    <string name="txt_type">Phân loại:</string>
+    <string name="btn_add_image">Thêm Hình</string>
+    <string name="btn_save">Lưu</string>
+    <string name="fab_back">Trở về</string>
+    <string name="toast_product_add">Thêm sản phẩm thành công</string>
+    <string name="mnu_product_list">Danh sách sản phẩm</string>
+    <string name="mnu_delete">Xóa thương hiệu</string>
+
+
+    // Trang chi tiết sản phẩm
+    <string name="btn_edit">Sửa</string>
+    <string name="btn_update">Cập Nhật</string>
+    <string name="toast_permission">Đã từ chối quyền</string>
+
+
+    // Trang thương hiệu sản phẩm
+    <string name="txt_brand_id">Mã thương hiệu:</string>
+    <string name="txt_brand_name">Tên thương hiệu:</string>
+    <string name="btn_brand_add">Thêm</string>
+    <string name="btn_brand_update">Cập nhật</string>
+    <string name="toast_brand_add">Đã thêm thương mại thành công</string>
+    <string name="toast_brand_update">Cập nhật thương hiệu thành công</string>
+    <string name="message_brand">Bạn có chắn muốn xóa thương hiệu này không?</string>
+    <string name="toast_delete_brand">Xáo thương hiệu thành công</string>
+    <string name="toast_deleted">Có những sản phẩm trong thương hiệu, không thể xóa</string>
+
+
+    // Trang main
+    <string name="toast_username">Sai tài khoản</string>
+    <string name="toast_password">Sai mật khẩu</string>
+
+
+    // About
+    <string name="toast_grant_permission">Vui lòng cấp quyền trong App Setting</string>
+
+
+    // Menu
+    <string name="menu_product_list">Danh sách sản phẩm</string>
+    <string name="menu_brand_list">Danh sách thương hiệu</string>
+    <string name="menu_logout">Đăng xuất</string>
+    <string name="menu_about">Thông tin cá nhân</string>
+    <string name="menu_exit">Thoát</string>
+</resources>
