@@ -79,7 +79,7 @@ public class DetailsActivity extends AppCompatActivity {
                 String kichthuoc = edtKichThuocChiTiet.getText().toString();
                 String phanloai = edtPhanLoaiChiTiet.getText().toString();
 
-                SanPham sanpham = new SanPham(1, ten, phanloai, imageViewToByte(imgHinhChiTiet),gia, kichthuoc);
+                SanPham sanpham = new SanPham(sp.getId(), ten, phanloai, imageViewToByte(imgHinhChiTiet),gia, kichthuoc);
                 ghiDuLieu(sanpham);
                 //Toast.makeText(DetailsActivity.this, "Cập nhật sản phẩm thành công!!!", Toast.LENGTH_SHORT).show();
 
