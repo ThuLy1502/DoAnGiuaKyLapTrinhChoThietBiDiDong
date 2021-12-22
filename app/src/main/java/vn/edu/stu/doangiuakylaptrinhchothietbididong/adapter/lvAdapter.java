@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import vn.edu.stu.doangiuakylaptrinhchothietbididong.DetailsActivity;
 import vn.edu.stu.doangiuakylaptrinhchothietbididong.R;
 import vn.edu.stu.doangiuakylaptrinhchothietbididong.model.SanPham;
 
@@ -62,18 +63,18 @@ public class lvAdapter extends BaseAdapter {
         Bitmap bitmap = BitmapFactory.decodeByteArray(hinh, 0, hinh.length);
         imgHinh.setImageBitmap(bitmap);
 
-//        ImageButton imgEdit = convertView.findViewById(R.id.imgEdit);
-//        imgEdit.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(
-//                        context,
-//                        DetailsActivity.class
-//                );
-//                intent.putExtra("chitiet", dsSanPham.get(position));
-//                context.startActivity(intent);
-//            }
-//        });
+        ImageButton imgEdit = convertView.findViewById(R.id.imgEdit);
+        imgEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(
+                        context,
+                        DetailsActivity.class
+                );
+                intent.putExtra("chitietsp", dsSanPham.get(position));
+                context.startActivity(intent);
+            }
+        });
 //
 //        ImageView ivSP = convertView.findViewById(R.id.ivSP);
 //        ivSP.setOnClickListener(new View.OnClickListener() {
