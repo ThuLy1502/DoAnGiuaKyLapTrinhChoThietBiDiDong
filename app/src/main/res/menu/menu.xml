@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/productlist"
+        android:icon="@drawable/icons_list"
+        android:title="DSSP"
+        app:showAsAction="withText"/>
+    <item android:id="@+id/brandlist"
+        android:icon="@drawable/icons_list"
+        android:title="DSTH"
+        app:showAsAction="withText"/>
+    <item android:id="@+id/logout"
+        android:icon="@drawable/icons_logout"
+        android:title="Logout"
+        app:showAsAction="withText"/>
+    <item android:id="@+id/about"
+        android:icon="@drawable/icons_about"
+        android:title="About"
+        app:showAsAction="withText"/>
+    <item android:id="@+id/exit"
+        android:icon="@drawable/icons_power_off_button"
+        android:title="exit"
+        app:showAsAction="withText"/>
+</menu>
