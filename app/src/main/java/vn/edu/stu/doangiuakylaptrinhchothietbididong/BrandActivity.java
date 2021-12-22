@@ -203,7 +203,7 @@ public class BrandActivity extends AppCompatActivity {
                             "thuonghieu",
                             row,
                             "idth=?",
-                            new String[]{th.getIdth() + ""}
+                            new String[]{thChon.getIdth() + ""}
                     );
                     Toast.makeText(
                             BrandActivity.this,
