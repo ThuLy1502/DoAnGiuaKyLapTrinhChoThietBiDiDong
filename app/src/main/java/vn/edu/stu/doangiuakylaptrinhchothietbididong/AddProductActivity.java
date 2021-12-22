@@ -66,7 +66,7 @@ public class AddProductActivity extends AppCompatActivity {
                 String kichthuoc = edtKichThuoc.getText().toString();
                 String phanloai = edtPhanLoai.getText().toString();
 
-                SanPham sp = new SanPham(1, ten, gia, imageViewToByte(imgHinh), kichthuoc, phanloai);
+                SanPham sp = new SanPham(1, ten, phanloai, imageViewToByte(imgHinh), gia, kichthuoc);
                 ghiDuLieu(sp);
                 Toast.makeText(AddProductActivity.this, getString(R.string.toast_product_add), Toast.LENGTH_SHORT).show();
             }
