@@ -1,5 +1,9 @@
 package vn.edu.stu.doangiuakylaptrinhchothietbididong;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+
 import android.Manifest;
 import android.content.ContentValues;
 import android.content.Intent;
@@ -18,10 +22,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
@@ -66,7 +66,7 @@ public class AddProductActivity extends AppCompatActivity {
                 String kichthuoc = edtKichThuoc.getText().toString();
                 String phanloai = edtPhanLoai.getText().toString();
 
-                SanPham sp = new SanPham(1, ten, phanloai, imageViewToByte(imgHinh),gia, kichthuoc);
+                SanPham sp = new SanPham(1, ten, gia, imageViewToByte(imgHinh), kichthuoc, phanloai);
                 ghiDuLieu(sp);
                 Toast.makeText(AddProductActivity.this, getString(R.string.toast_product_add), Toast.LENGTH_SHORT).show();
             }

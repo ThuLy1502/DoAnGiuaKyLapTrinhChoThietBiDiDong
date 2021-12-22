@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".AddProductActivity">
 
-
     <TextView
         android:id="@+id/tvTen"
         android:layout_width="wrap_content"

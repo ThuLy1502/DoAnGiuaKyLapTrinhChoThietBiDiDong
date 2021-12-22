@@ -46,11 +46,12 @@ public class HomePageActivity extends AppCompatActivity {
 
         copyDBFromAsssets();
         addControls();
-        addEvents();
+
         docDsSpTuDb();
         Intent intent = getIntent();
         th = (ThuongHieu) intent.getSerializableExtra("hienThiSpTheoTh");
         docDsSpTheoTh();
+        addEvents();
     }
 
     private void docDsSpTheoTh() {
