@@ -133,42 +133,42 @@ public class BrandActivity extends AppCompatActivity {
 //    }
 
     private void addEvents() {
-//        btnThemThuongHieu.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                String idTH = edtMaThuongHieu.getText().toString();
-//                String tenTH = edtTenThuongHieu.getText().toString();
-//
-//                ThuongHieu th = new ThuongHieu(
-//                        idTH + " ",
-//                        tenTH
-//                );
-//                SQLiteDatabase database = openOrCreateDatabase(
-//                        DB_NAME,
-//                        MODE_PRIVATE,
-//                        null
-//                );
-//                ContentValues row = new ContentValues();
-//                row.put("idth", th.getIdth());
-//                row.put("tenth", th.getTenth());
-//
-//                long insertedID = database.insert(
-//                        "thuonghieu",
-//                        null,
-//                        row
-//                );
-//
-//                Toast.makeText(
-//                        BrandActivity.this,
-//                        "Thêm thương hiệu thành công",
-//                        Toast.LENGTH_LONG
-//                ).show();
-//                edtMaThuongHieu.setText("");
-//                edtTenThuongHieu.setText("");
-//                database.close();
-//                docDsThuonghieuTuDb();
-//            }
-//        });
+        btnThemThuongHieu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String idTH = edtMaThuongHieu.getText().toString();
+                String tenTH = edtTenThuongHieu.getText().toString();
+
+                ThuongHieu th = new ThuongHieu(
+                        idTH + " ",
+                        tenTH
+                );
+                SQLiteDatabase database = openOrCreateDatabase(
+                        DB_NAME,
+                        MODE_PRIVATE,
+                        null
+                );
+                ContentValues row = new ContentValues();
+                row.put("tenth", th.getIdth());
+                row.put("idth", th.getTenth());
+
+                long insertedID = database.insert(
+                        "thuonghieu",
+                        null,
+                        row
+                );
+
+                Toast.makeText(
+                        BrandActivity.this,
+                        "Thêm thương hiệu thành công",
+                        Toast.LENGTH_LONG
+                ).show();
+                edtMaThuongHieu.setText("");
+                edtTenThuongHieu.setText("");
+                database.close();
+                docDsThuonghieuTuDb();
+            }
+        });
 
 //        lvThuongHieu.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 //            @Override
