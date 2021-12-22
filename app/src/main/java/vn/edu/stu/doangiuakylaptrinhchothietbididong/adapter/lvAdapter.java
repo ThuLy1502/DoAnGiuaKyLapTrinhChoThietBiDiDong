@@ -88,13 +88,13 @@ public class lvAdapter extends BaseAdapter {
 //                context.startActivity(intent);
 //            }
 //        });
-//        ivSP.setOnLongClickListener(new View.OnLongClickListener() {
-//            @Override
-//            public boolean onLongClick(View v) {
-//
-//               return false;
-//            }
-//        });
+        ivSP.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+
+               return false;
+            }
+        });
         return convertView;
     }
 }
