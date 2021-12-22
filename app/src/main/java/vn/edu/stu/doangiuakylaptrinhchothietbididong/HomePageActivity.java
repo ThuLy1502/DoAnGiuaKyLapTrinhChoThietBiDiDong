@@ -33,13 +33,13 @@ public class HomePageActivity extends AppCompatActivity {
                         HomePageActivity.class);
                 startActivity(intent);
                 break;
-//            case R.id.brandlist:
-//                Intent intent1 = new Intent(
-//                        HomePageActivity.this,
-//                        BrandActivity.class
-//                );
-//                startActivity(intent1);
-//                break;
+            case R.id.brandlist:
+                Intent intent1 = new Intent(
+                        HomePageActivity.this,
+                        BrandActivity.class
+                );
+                startActivity(intent1);
+                break;
             case R.id.logout:
                 Intent intent2 = new Intent(
                         HomePageActivity.this,
