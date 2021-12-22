@@ -170,54 +170,54 @@ public class BrandActivity extends AppCompatActivity {
             }
         });
 
-//        lvThuongHieu.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                thChon = adapterThuongHieu.getItem(position);
-//
-//                edtMaThuongHieu.setText(thChon.getIdth().toString());
-//                edtTenThuongHieu.setText(thChon.getTenth().toString());
-//            }
-//        });
+        lvThuongHieu.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                thChon = adapterThuongHieu.getItem(position);
 
-//        btnSuaThuongHieu.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if (thChon != null) {
-//                    String idTH = edtMaThuongHieu.getText().toString();
-//                    String tenTH = edtTenThuongHieu.getText().toString();
-//
-//                    ThuongHieu th = new ThuongHieu(
-//                            idTH + " ",
-//                            tenTH
-//                    );
-//                    SQLiteDatabase database = openOrCreateDatabase(
-//                            DB_NAME,
-//                            MODE_PRIVATE,
-//                            null
-//                    );
-//                    ContentValues row = new ContentValues();
-//                    //row.put("idth", th.getIdth());
-//                    row.put("tenth", th.getTenth());
-//                    int updatedRowCount = database.update(
-//                            "thuonghieu",
-//                            row,
-//                            "idth=?",
-//                            new String[]{thChon.getIdth() + ""}
-//                    );
-//                    Toast.makeText(
-//                            BrandActivity.this,
-//                            getString(R.string.toast_brand_update),
-//                            Toast.LENGTH_LONG
-//                    ).show();
-//                    edtMaThuongHieu.setText("");
-//                    edtTenThuongHieu.setText("");
-//                    database.close();
-//                    docDsThuonghieuTuDb();
-//                    thChon = null;
-//                }
-//            }
-//        });
+                edtMaThuongHieu.setText(thChon.getIdth().toString());
+                edtTenThuongHieu.setText(thChon.getTenth().toString());
+            }
+        });
+
+        btnSuaThuongHieu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (thChon != null) {
+                    String idTH = edtMaThuongHieu.getText().toString();
+                    String tenTH = edtTenThuongHieu.getText().toString();
+
+                    ThuongHieu th = new ThuongHieu(
+                            idTH + " ",
+                            tenTH
+                    );
+                    SQLiteDatabase database = openOrCreateDatabase(
+                            DB_NAME,
+                            MODE_PRIVATE,
+                            null
+                    );
+                    ContentValues row = new ContentValues();
+                    //row.put("idth", th.getIdth());
+                    row.put("tenth", th.getTenth());
+                    int updatedRowCount = database.update(
+                            "thuonghieu",
+                            row,
+                            "idth=?",
+                            new String[]{th.getIdth() + ""}
+                    );
+                    Toast.makeText(
+                            BrandActivity.this,
+                            "Cập nhật thành công",
+                            Toast.LENGTH_LONG
+                    ).show();
+                    edtMaThuongHieu.setText("");
+                    edtTenThuongHieu.setText("");
+                    database.close();
+                    docDsThuonghieuTuDb();
+                    thChon = null;
+                }
+            }
+        });
 
 //        lvThuongHieu.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
 //            @Override
