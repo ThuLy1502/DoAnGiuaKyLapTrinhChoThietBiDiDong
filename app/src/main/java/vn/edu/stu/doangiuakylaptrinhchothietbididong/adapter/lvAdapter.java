@@ -71,12 +71,12 @@ public class lvAdapter extends BaseAdapter {
                         context,
                         DetailsActivity.class
                 );
-                intent.putExtra("chitietsp", dsSanPham.get(position));
+                intent.putExtra("chitiet", dsSanPham.get(position));
                 context.startActivity(intent);
             }
         });
 //
-//        ImageView ivSP = convertView.findViewById(R.id.ivSP);
+        ImageView ivSP = convertView.findViewById(R.id.ivSP);
 //        ivSP.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
