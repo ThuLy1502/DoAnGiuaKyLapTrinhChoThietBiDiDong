@@ -53,8 +53,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void addControls() {
-        txtTaiKhoan = findViewById(R.id.txtMatKhau);
-        txtMatKhau = findViewById(R.id.txtTaiKhoan);
+        txtTaiKhoan = findViewById(R.id.txtTaiKhoan);
+        txtMatKhau = findViewById(R.id.txtMatKhau);
         btnDangNhap = findViewById(R.id.btnDangNhap);
     }
 }
