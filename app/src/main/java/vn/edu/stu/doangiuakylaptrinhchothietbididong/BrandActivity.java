@@ -49,6 +49,7 @@ public class BrandActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_brand);
 
+        dsSanPham = new ArrayList<>();
         copyDbFromAssets();
         addControls();
         docDsThuonghieuTuDb();
