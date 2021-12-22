@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import vn.edu.stu.doangiuakylaptrinhchothietbididong.R;
 import vn.edu.stu.doangiuakylaptrinhchothietbididong.model.SanPham;
 
 public class lvAdapter extends BaseAdapter {
@@ -50,17 +51,17 @@ public class lvAdapter extends BaseAdapter {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         convertView = inflater.inflate(layout, null);
 
-//        TextView txtTenSP = convertView.findViewById(R.id.tvTenSanPham);
-//        TextView txtGia = convertView.findViewById(R.id.tvGia);
-//        ImageView imgHinh = convertView.findViewById(R.id.ivSP);
-//        SanPham sp = dsSanPham.get(position);
-//        txtTenSP.setText(sp.getTensp().toString());
-//        txtGia.setText(sp.getGia().toString());
-//        byte[] hinh = sp.getHinhanh();
-//
-//        Bitmap bitmap = BitmapFactory.decodeByteArray(hinh, 0, hinh.length);
-//        imgHinh.setImageBitmap(bitmap);
-//
+        TextView txtTenSP = convertView.findViewById(R.id.tvTenSanPham);
+        TextView txtGia = convertView.findViewById(R.id.tvGia);
+        ImageView imgHinh = convertView.findViewById(R.id.ivSP);
+        SanPham sp = dsSanPham.get(position);
+        txtTenSP.setText(sp.getTensp().toString());
+        txtGia.setText(sp.getGia().toString());
+        byte[] hinh = sp.getHinhanh();
+
+        Bitmap bitmap = BitmapFactory.decodeByteArray(hinh, 0, hinh.length);
+        imgHinh.setImageBitmap(bitmap);
+
 //        ImageButton imgEdit = convertView.findViewById(R.id.imgEdit);
 //        imgEdit.setOnClickListener(new View.OnClickListener() {
 //            @Override

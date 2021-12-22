@@ -35,9 +35,9 @@ public class HomePageActivity extends AppCompatActivity {
     lvAdapter lvSanPhamAdapter;
     FloatingActionButton fabThem;
 
-//    final String DB_PATH_SUFFIX = "/databases/";
-//    final String DB_NAME = "dbsanpham.sqlite";
-//    ThuongHieu th;
+    final String DB_PATH_SUFFIX = "/databases/";
+    final String DB_NAME = "dbsanpham.sqlite";
+    ThuongHieu th;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
